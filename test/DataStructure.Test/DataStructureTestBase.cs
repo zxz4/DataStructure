@@ -8,17 +8,19 @@ namespace DataStructure
 {
     public abstract class DataStructureTestBase
     {
+#if DEBUG
+        /// <summary>
+        /// 最大数组长度
+        /// </summary>
+        public const int MaxArraySize = 20;
+#else
+        public const int MaxArraySize = 1000;
+#endif
 
         /// <summary>
         /// 测试次数
         /// </summary>
         public const int TestTimes = 1000;
-
-        /// <summary>
-        /// 最大数组长度
-        /// </summary>
-        public const int MaxArraySize = 1000;
-
 
         /// <summary>
         /// 最大生成值

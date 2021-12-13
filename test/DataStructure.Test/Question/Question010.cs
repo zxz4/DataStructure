@@ -1,0 +1,56 @@
+﻿using System;
+using System.Linq;
+using System.Text;
+
+namespace DataStructure.Question
+{
+    /// <summary>
+    /// 给定一个数组arry，和一个数num
+    /// 请把小于num放在数组左边
+    /// 等于num的放在数组中间
+    /// 大于num的放在数组右边
+    /// </summary>
+    public class Question010 : DataStructureTestBase
+    {
+        private int[] arry;
+
+        int num;
+
+        public override void Algorithm()
+        {
+            arry = RandomNumbersGenerator();
+            num = RandomNumberGenerator();
+
+            int lBorder = 0, rBorder = arry.Length - 1, temp;
+
+            for (int i = 0; i <= rBorder;)
+            {
+                if (arry[i] < num)
+                {
+                    temp = arry[i];
+                    arry[i] = arry[lBorder];
+                    arry[lBorder] = temp;
+                    lBorder++;
+                    i++;
+                }
+                else if (arry[i] > num)
+                {
+                    temp = arry[i];
+                    arry[i] = arry[rBorder];
+                    arry[rBorder] = temp;
+                    rBorder--;
+                }
+                else
+                {
+                    i++;
+                }
+
+            }
+        }
+
+        public override bool AlgorithmAssert()
+        {
+            return true;
+        }
+    }
+}

@@ -7,6 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure", "src\DataSt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.Test", "test\DataStructure.Test\DataStructure.Test.csproj", "{54D661A5-60D0-4D03-B3A3-9CF40D55AC01}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{F7A4945E-2FA9-41B4-A8FC-36BC5CFAC0D6}"
+	ProjectSection(SolutionItems) = preProject
+		note\P01 认识复杂度和简单排序算法.md = note\P01 认识复杂度和简单排序算法.md
+		note\P02 认识O(NlogN)的排序.md = note\P02 认识O(NlogN)的排序.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
